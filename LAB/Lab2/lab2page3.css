@@ -1,0 +1,62 @@
+body{
+    background-color: #85AFD4;
+    font-family:"Lato";
+    
+}
+h1,h2,p,span,label{
+    color: white;
+}
+h2{
+    font-size: 40px;
+}
+p{
+    font-size: 25px;
+}
+h1{
+    font-size: 35px;
+}
+img{
+    height:80px;
+    width:250px;
+}
+.center{
+    text-align: center;
+}
+a{
+    color:white;
+    font-weight:bold;
+}
+#button{
+    background-color:#E47272;
+    color:white;
+    border-radius: 20px;
+    font-size: 15px;
+    height:40px;
+    width:250px;
+    
+}
+#okvir{
+    margin:auto;
+    width:50%;
+    
+    text-align: left;
+    
+}
+.uvuceno{
+    padding-left:50px;
+}
+input[type="text"],input[type="password"]{
+width:85%;
+height:50px;
+display: block;
+padding-left:15px;
+
+
+}
+.lijevo{
+    text-align: left;
+}
+
+h3 {
+    color: white;
+}
