@@ -5,17 +5,39 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="./project.css">
+    <link rel="stylesheet" href="/Project/CSS/project.css">
+    <link rel="stylesheet" href="project.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   </head>
-  <center>
   <body>
-    <img src="https://image.spreadshirtmedia.com/image-server/v1/compositions/T1089A2PA3955PT17X8Y0D1037126804W7933H9524/views/1,width=550,height=550,appearanceId=2,backgroundColor=000000,noPt=true/black-dagger-brotherhood-beanie.jpg">
-    <div class="navbar">
-        <a href="Page1.html">Home</a>
-        <a href="Page2.html">Author</a>
-        <a href="Page3.html">Forum</a>
-        <form>
+    <div class="card text-white bg-dark mb-3">
+    <header class="header">
+      <img class="header-img" src="https://i.pinimg.com/564x/a8/e7/13/a8e713613bb9e142f401f06f43986fe7.jpg">
+      <div class="navbar">
+          <a href="Page1.html">Home</a>
+          <div class="dropdown">
+            <button class="dropbtn">
+              Books
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="book1.html">Dark Lover</a>
+              <a href="book2.html">Lover Eternal</a>
+              <a href="book3.html">Lover Awakend</a>
+              <a href="book4.html">Lover Revealed</a>
+              <a href="book5.html">Lover Unbound</a>
+              <a href="book6.html">Lover Enshrined</a>
+            </div>
+          </div>
+          <a href="Page2.html">Author</a>
+          <a href="Page3.html">Forum</a>
+  </div>
+</header>
+<center>
+  <div class="container">
+    <h1 class="form-title">Register</h1>
+      <form action="#">
+        <div class="user-info">
           <div class="form-group">
               <label for="Email">Email address</label>
               <input type="email" class="form-control" id="Email">
@@ -32,12 +54,28 @@
             <label for="DateOfBirth">Date of Birth</label>
             <input type="date" class="form-control" id="DateOfBirth">
         </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="gender-detail-box">
+          <span class="gender-title">Gender</span>
+          <div class="gender-category">
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="other">
+            <label for="other">Other</label>
+            <input type="radio" name="gender" id="dwts">
+            <label for="doesnt-want-to-say">Doesn't want to say</label>
+          </div>
+        </div>
+        <button type="button" class="btn btn-danger">Submit</button>
       </form>
   </div>
-    <footer>
-        <p>New book being relised on 9.4.2024 The Beloved! Cinci event 13.4.2024!</p>
-      </footer>
-  </body>
+</div>
+  <footer>
+    <p class="footer">New book being relised on 9.4.2024 The Beloved! Cinci event 13.4.2024!</p>
+  </footer>
 </center>
+</div>
+  </body>
 </html>
