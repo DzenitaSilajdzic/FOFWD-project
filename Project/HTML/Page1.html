@@ -31,10 +31,12 @@
             </div>
             <a href="Page2.html">Author</a>
             <a href="Page3.html">Forum</a>
+            <a href="ajax.html">Table</a>
     </div>
   </header>
 </center>
     <br>
+    <button onclick="myFunction()">Toggle red mode</button>
     <br>
     <center>
     
@@ -42,17 +44,83 @@
     <p class="quote">
       The warrior (Zsadist) rolled his black eyes. "Come on, man. What does it matter to me? You, Tohr. Britney Spears".
       </p>
-    </center>
         <p class="book-des">
-          The Black Dagger Brotherhood is an ongoing series of paranormal romance books by author J. R. Ward.<br>
+          The Black Dagger Brotherhood is an ongoing series of paranormal romance books by author J. R. Ward.<br><span id="dots">...</span><span id="more">
           The series focuses on a society of vampire warriors who live together and defend their race against de-souled humans called lessers.
           They are an elite force of military-grade vampires, bred for protecting their race, bonded into brotherhood by hundreds of years of devotion to their King and one another, but each having their own unique story, traits, and abilities.
           In terms of tropes, it has the standard vampire-slayer conflict, except that the world-building around that trope is wildly unexpected. In this world, vampires are a species distinct from humans that are born, not sired.
           Their progenitor is an immortal being known as the Scribe Virgin who is at war with another immortal known as the Omega and is determined to put an end to the vampire race.
           Furthermore, vampires don’t kill or feed on humans; only the blood of their own race can nourish them.
-             </p>
+        </span></p>
+        <button onclick="readMore()" id="myBtn">Read more</button>
       <div class="fan">
-      <img class="fan-book" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1418492150i/12810599._SX540_.jpg">
+
+      <!-- Container for the image gallery -->
+        <div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1418492150i/12810599._SX540_.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwZrJIFjcsHSQvmY2qrPObfHhYm2V6xQQmvw&s" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy81riVMpTNENNJjLqgLmcesoCytTL7TNK8g&s" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZjLeYZbBTVC-pSMq2N-1_5f0J4a7MbFxm-w&s" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIkrLIoaQHkHJzvnuBeAMfrKJ4P0K-foI7Og&s" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Q8nfo7SXpH11dBkmyadp4y0kPKcBdUe-7A&s" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1418492150i/12810599._SX540_.jpg" style="width:100%" onclick="currentSlide(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwZrJIFjcsHSQvmY2qrPObfHhYm2V6xQQmvw&s" style="width:100%" onclick="currentSlide(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy81riVMpTNENNJjLqgLmcesoCytTL7TNK8g&s" style="width:100%" onclick="currentSlide(3)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZjLeYZbBTVC-pSMq2N-1_5f0J4a7MbFxm-w&s" style="width:100%" onclick="currentSlide(4)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIkrLIoaQHkHJzvnuBeAMfrKJ4P0K-foI7Og&s" style="width:100%" onclick="currentSlide(5)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Q8nfo7SXpH11dBkmyadp4y0kPKcBdUe-7A&s style="width:100%" onclick="currentSlide(6)">
+    </div>
+  </div>
+</div>
+</center>
         <p class="fan-words">
           The "Brotherhood" phenomena started with the publishing of Dark Lover in 2005, and like a wildfire, grew to epic proportions within a very short amount of time into a USA Today Bestseller and a New York Times Bestseller hit series.
           Check out the interesting facts behind this lush, exotic world that Ms. J.R. Ward has woven.
@@ -63,5 +131,56 @@
           <p class="footer">New book being relised on 9.4.2024 The Beloved! Cinci event 13.4.2024!</p>
         </footer>
       </center>
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("demo");
+          let captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+
+        function myFunction() {
+          var element = document.body;
+          element.classList.toggle("red-mode");
+        }
+
+        function readMore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+        </script>
   </body>
 </html>

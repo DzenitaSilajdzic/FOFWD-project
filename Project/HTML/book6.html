@@ -30,8 +30,10 @@
           </div>
           <a href="Page2.html">Author</a>
           <a href="Page3.html">Forum</a>
+          <a href="ajax.html">Table</a>
   </div>
 </header>
+<button onclick="myFunction()">Toggle red mode</button>
 <img class="books" src="https://i.pinimg.com/564x/12/68/d6/1268d641bf550b65ef2a96eaa8f05b55.jpg">
 <p class="quote">
     "For fuck's sake, get off the cross. Someone else needs the wood."<br>
@@ -49,5 +51,11 @@
     <p class="footer">New book being relised on 9.4.2024 The Beloved! Cinci event 13.4.2024!</p>
   </footer>
 </center>
+<script>
+  function myFunction() {
+    var element = document.body;
+    element.classList.toggle("red-mode");
+  }
+  </script>
 </body>
 </html>

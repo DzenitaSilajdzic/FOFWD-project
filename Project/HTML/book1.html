@@ -30,13 +30,18 @@
           </div>
           <a href="Page2.html">Author</a>
           <a href="Page3.html">Forum</a>
+          <a href="ajax.html">Table</a>
   </div>
 </header>
+<button onclick="myFunction()">Toggle red mode</button>
 <img class="books" src="https://i.pinimg.com/564x/12/bd/8e/12bd8eb91e9d6c409305213501848885.jpg">
+<p><button onclick="chageQuote()">Chage quote</button></p>
+<div id="myDIV">
 <p class="quote">
     "Welcome to the wonderful world of jealousy, for the price of admission, you get a splitting headache, a nearly irresistible urge to commit murder and an inferiority complex. Yippee."<br>
     -Wrath
     </p>
+  </div>
 <p class="des">
     The story focuses on the romance between Wrath, the only pure blooded vampire left on the planet, and Beth a human/vampire half breed who is about to undergo the transition from human to vampire but isn't aware of her vampire heritage. There are a lot of obstacles in their path.
 </p>
@@ -49,5 +54,20 @@
     <p class="footer">New book being relised on 9.4.2024 The Beloved! Cinci event 13.4.2024!</p>
   </footer>
 </center>
+<script>
+  function myFunction() {
+    var element = document.body;
+    element.classList.toggle("red-mode");
+  }
+function chageQuote() {
+  var x = document.getElementById("myDIV");
+  if (x.innerHTML === "Welcome to the wonderful world of jealousy, for the price of admission, you get a splitting headache, a nearly irresistible urge to commit murder and an inferiority complex. Yippee. -Wrath") {
+    x.innerHTML = "You don't know this yet, but you are mine. -Wrath";
+  } else {
+    x.innerHTML = "Welcome to the wonderful world of jealousy, for the price of admission, you get a splitting headache, a nearly irresistible urge to commit murder and an inferiority complex. Yippee. -Wrath";
+  }
+}
+
+  </script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <h1>Language data</h1>
+    <ul id="language"></ul>
+    
+
+    <script>
+        $(document).ready(function () {
+        fetchLanguage();
+      });
+
+
+      function fetchLanguage() {
+        $.ajax({
+          url: "languages.json", // Path to the JSON file
+          type: "GET", // Type of the request
+          dataType: "json", // Expected data type of the response
+          success: function (data) {
+            // Function is executed if the request succeeds
+            let html = "";
+            data.forEach(function (language) {
+              html += "<li>" + language.name + "</li>"; // Append each student's name to the list
+            });
+            $("#language").html(html); // Insert the list items into the HTML
+          },
+          error: function (xhr, status, error) {
+            console.error("Error fetching languages:", error);
+          },
+        });
+      }
+    </script>
+    </body>
+    </html>
